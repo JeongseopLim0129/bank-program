@@ -1,4 +1,4 @@
-class BankAccount():
+class BankAccount:
     def open_account():
         print('\n[계좌개설]')
         a = int(input('계좌ID:(숫자로 입력)'))
