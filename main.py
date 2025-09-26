@@ -1,4 +1,4 @@
-class bank_account():
+class BankAccount():
     def open_account():
         print('\n[계좌개설]')
         a = int(input('계좌ID:(숫자로 입력)'))
@@ -33,7 +33,7 @@ while i != 5:
     i = int(input('선택(1~5 숫자만 입력) : '))
 
     if i == 1:
-        bank_account.open_account()
+        BankAccount.open_account()
 
     elif i == 2:
         print('\n[입금]')
@@ -41,7 +41,7 @@ while i != 5:
         deposit_amount = int(input('입금액: '))
 
         if deposit_id in accounts.keys():
-            bank_account.deposit
+            BankAccount.deposit
         else:
             print('유효하지 않은 ID 입니다')
             break
@@ -52,12 +52,12 @@ while i != 5:
         withdrawal_amount = int(input('출금액: '))
 
         if withdrawal_id in accounts.keys():
-            bank_account.withdrawal
+            BankAccount.withdrawal
         else:
             print('유효하지 않은 ID 입니다')
             break
 
     elif i == 4:
-        bank_account.print_all_account()
+        BankAccount.print_all_account()
     
     print()
