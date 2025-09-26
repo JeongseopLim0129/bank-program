@@ -5,10 +5,13 @@ class BankAccount:
             a = int(input('계좌ID:(숫자로 입력)'))
         except ValueError:
             print('숫자만 입력하세요')
+            return
         try:
             amount = int(input('입금액: '))
         except:
             print('숫자만 입력하세요')
+            return
+        
         accounts[a][0] = [input('이름: ')]
         accounts[a][1] = amount
 
@@ -41,6 +44,7 @@ while i != 5:
         i = int(input('선택(1~5 숫자만 입력) : '))
     except ValueError:
         print('1~5의 숫자만 입력하세요')
+        break
 
     if i == 1:
         BankAccount.open_account()
@@ -51,10 +55,12 @@ while i != 5:
             deposit_id = int(input('계좌ID: '))
         except:
             print('숫자만 입력하세요')
+            break
         try:
             deposit_amount = int(input('입금액: '))
         except:
             print('숫자만 입력하세요')
+            break
 
         if deposit_id in accounts.keys():
             BankAccount.deposit
@@ -70,10 +76,12 @@ while i != 5:
             withdrawal_id = int(input('계좌ID: '))
         except:
             print('숫자만 입력하세요')
+            break
         try:
             withdrawal_amount = int(input('출금액: '))
         except:
             print('숫자만 입력하세요')
+            break
 
         if withdrawal_id in accounts.keys():
             BankAccount.withdrawal
